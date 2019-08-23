@@ -10,9 +10,11 @@ html {
 }
 
 body {
+    min-width: 1020px;
     font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     /* color: #333; */
-    background-color: #fff;
+    color: #fff;
+    background-color: #18171b;
 }
 
 table {
@@ -30,25 +32,20 @@ td,th {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 0.5em 1fr 0.5em;
-    grid-template-rows: 0fr  1fr 0fr;
-    max-width: 1020px;
+    width: 980px;
     margin-right: auto;
     margin-left: auto
 }
 
 .container:before {
+    display: table;
     content: ""
 }
 
 .container:after {
+    display: table;
     clear: both;
     content: ""
-}
-
-.item {
-    display: flex;
 }
 
 .boxed-group {
@@ -58,7 +55,7 @@ td,th {
 }
 
 #readme .markdown-body, #readme .plain {
-    background-color: #fff;
+    background-color: #18171b;
     border: 1px solid #ddd;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -72,17 +69,19 @@ td,th {
 }
 
 .repository-with-sidebar:before {
+    display: table;
     content: ""
 }
 
 .repository-with-sidebar:after {
+    display: table;
     clear: both;
     content: ""
 }
 
 .repository-with-sidebar .repository-sidebar {
     float: right;
-    width: 38px;
+    width: 38px
 }
 
 .repository-with-sidebar .repository-sidebar .sidebar-button {
@@ -104,7 +103,7 @@ td,th {
 }
 
 .repository-with-sidebar .repository-sidebar .clone-url.open {
-    display: flex;
+    display: block
 }
 
 .repository-with-sidebar .repository-sidebar .clone-options {
@@ -121,19 +120,13 @@ td,th {
     cursor: pointer
 }
 
-.repository-with-sidebar, .repository-content {
-    float: left;
-    width: 100%;
+.repository-with-sidebar .repository-content {
+    /* float: left; */
+    width: 920px;
 }
-
-@media (min-width: 1020px) {
-    .repository-with-sidebar, .repository-content {
-        width: 1020px;
-    }
-}
-
 
 .repository-with-sidebar.with-full-navigation .repository-content {
+    width: 790px;
 }
 
 .repository-with-sidebar.with-full-navigation .repository-sidebar {
@@ -147,13 +140,13 @@ td,th {
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #333;
+  color: #fff;
+  background-color: #18171b;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
-  text-align: justify;
 }
 
 .markdown-body a {
@@ -191,6 +184,7 @@ td,th {
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
+  background-color: rgba(220, 224, 228, 0.1) !important;
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -255,10 +249,12 @@ td,th {
 }
 
 .markdown-body hr:before {
+  display: table;
   content: "";
 }
 
 .markdown-body hr:after {
+  display: table;
   clear: both;
   content: "";
 }
@@ -538,12 +534,12 @@ td,th {
 }
 
 .markdown-body table tr {
-  background-color: #fff;
+  background-color: #18171b;
   border-top: 1px solid #ccc;
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #2a2c2e;
 }
 
 .markdown-body img {
@@ -574,7 +570,7 @@ td,th {
   font-size: 100%;
   word-break: normal;
   white-space: pre;
-  background: transparent;
+  background: transparent !important;
   border: 0;
 }
 
